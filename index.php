@@ -126,9 +126,35 @@ elseif (isset($_GET['ensorceler'])) {
     <html lang="fr">
     <head>
         <title>TP : Mini Jeu de Combat</title>
+        <style>
+            #myNavbar {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #333;
+            }
+
+            #myNavbar li {
+                float: left;
+            }
+
+            #myNavbar li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+            #myNavbar li a:hover {
+                background-color: #111;
+            }
+        </style>
     </head>
 
     <body>
+    <?php include('headerMenu.php') ?>
     <p>Nombre de personnage en lisse : <?= $persoManager->count() ?></p>
     <?php
     if (isset($msg)) echo '<p>', $msg, '</p>';
